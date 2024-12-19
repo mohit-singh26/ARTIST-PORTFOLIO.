@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        
+
+        .gallery-container {
+            text-align: center;
+            margin: 40px;
+        }
+
+        .gallery-container h1 {
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <a href="newf.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="about.html">Gallery</a>
+                <a href="contactform0.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="gallery-container">
+        <h1>Explore Art</h1>
+        <div class="gallery-grid">
+            <img src="Screenshot 2024-12-19 215639.png" alt="Artwork 1">
+            <img src="1........png" alt="Artwork 2">
+            <img src="122.......png" alt="Artwork 3" height="100">
+            <img src="3........png" alt="Artwork 4">
+            <img src="5.......png" alt="Artwork 5">
+            <img src="6.....png" alt="Artwork 6">
+            <img src="10.....png" alt="Artwork 5">
+            <img src="11......png" alt="Artwork 6">
+        </div>
+    </div>
+</body>
+</html>
