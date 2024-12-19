@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Artist</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            height: 100vh;
+        }
+        .artist-image {
+            width: 40%;
+            margin-right: 50px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .artist-image img {
+            width: 100%;
+            height: auto;
+        }
+        .artist-introduction {
+            width: 50%;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .artist-introduction h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .artist-introduction p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .container .artist-image, .container .artist-introduction {
+            flex: 1;
+        }
+    </style>
+</head>
+<body> 
+    <header>
+    <div>
+        <nav>
+            <a href="newf.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactform0.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+    <div class="container">
+        <div class="artist-image">
+            <img src="Screenshot 2024-12-19 165300.png" alt="Artist Image">
+        </div>
+        <div class="artist-introduction">
+            <h1>About the Artist</h1>
+            <p>zeya marx (b. 1992, London UK) [they/them] is a non-binary multimedia artist, musician, cognitive scientist, and creative technologist based in Pittsburgh, PA, US. They’ve founded or co-founded several projects, including POST-VIVO, Xylantha, AI Markus, and most recently mask.in.drome; distinct bodies of multimedia work including sound, installation, performance, and video.</p>
+            <p>zeya exists liminally, between identities, genders, and nationalities, engaging and challenging an ever-changing array of social and cultural constructs. They are a process anarchist, preferring extemporaneous expressive clarity over technical completeness, perpetually exploring new mediums and tools in a quest to capture creative impulse and concept as close as possible to their source. They value accessibility and expressive directness in artistic tools, working toward inclusive futures without class barriers to art making and visual beauty. Their work celebrates, among other things: queerness, otherness, imperfection, chaos, color, representative form, psyche, digital post-psyche, synesthesia, and the natural & supernatural worlds..Stay connected and discover more about their journey and upcoming projects.</p>
+        </div>
+    </div>
+
+</body>
+</html>
