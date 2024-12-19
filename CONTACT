@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        body {
+            font-family: "Times New Roman", serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('Screenshot 2024-12-19 195722.png') no-repeat center/cover;
+            background-size: cover;
+            color: #f0e6d2;
+        }
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .required::after {
+            content: " *";
+            color: red;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 1em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<header style="position: absolute; top: 0; left: 0;">    
+    <nav>
+    <a href="newf.html" style="font-size:larger; color: #f4ecec;;">Home</a>
+    <a href="about.html" style="font-size:larger; color: #f4ecec;;">About</a>
+    <a href="gallery.html" style="font-size:larger; color: #f4ecec;;">Gallery</a>
+    <a href="contactform0.html" style="font-size:larger; color: #f4ecec;;">Contact</a>
+</nav>
+</header>
+
+
+<div class="form-container">
+    <form id="contactForm" onsubmit="return validateForm()">
+        <h2>Contact Us</h2>
+        <div>
+            <label class="required">Full Name</label>
+            <input type="text" id="fullName" required>
+            <div class="error-message" id="fullNameError">Name is required</div>
+        </div>
+        <div>
+            <label class="required">Email</label>
+            <input type="email" id="emailAddress" required>
+            <div class="error-message" id="emailError">Valid email required</div>
+        </div>
+        <div>
+            <label class="required">Contact Number</label>
+            <input type="tel" id="phoneNumber" pattern="[0-9]{10}" required>
+            <div class="error-message" id="phoneError">10-digit number required</div>
+        </div>
+        <div>
+            <label class="required">Message</label>
+            <textarea id="userMessage" required></textarea>
+            <div class="error-message" id="message Error">Message required</div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        let isFormValid = true;
+        document.querySelectorAll('.error-message').forEach(error => error.style.display = 'none');
+
+        if (!document.getElementById('fullName').value.trim()) {
+            document.getElementById('fullNameError').style.display = 'block';
+            isFormValid = false;
+        }
+
+        const email = document.getElementById('emailAddress').value.trim();
+        if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email)) {
+            document.getElementById('emailError').style.display = 'block';
+            isFormValid = false;
+        }
+
+        const phone = document.getElementById('phoneNumber').value.trim();
+        if (!/^[0-9]{10}$/.test(phone)) {
+            document.getElementById('phoneError').style.display = 'block';
+            isFormValid = false;
+        }
+
+        if (!document.getElementById('userMessage').value.trim()) {
+            document.getElementById('messageError').style.display = 'block';
+            isFormValid = false;
+        }
+
+        return isFormValid;
+    }
+</script>
+
+</body>
+</html>
